@@ -8,8 +8,8 @@
         body {
             display: flex;
             justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
         }
@@ -17,8 +17,6 @@
 
         video {
             max-width: 80%;
-            border: 2px solid green;
-            border-radius: 10px;
         }
         .anim-box {
             position: relative;
@@ -59,20 +57,27 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(85, 122, 85, 0.486); /* lekko zielony */
             pointer-events: none; /* żeby nie blokować interakcji z video */
         }
+        .logo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
 
     </style>
 </head>
 <body>
+    <div class="logo">
+        <img src="logo.png" alt="">
+    </div>
     <div class="anim-box">
-
         <div class="animated-text">
             URBANLAB <br>
             STRONA W BUDOWIE
         </div>
-        <div class="video-overlay"></div>
         <video autoplay muted loop>
             <source src="Monia.mp4" type="video/mp4">
             Twoja przeglądarka nie obsługuje wideo HTML5.
